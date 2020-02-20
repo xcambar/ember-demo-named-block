@@ -1,0 +1,18 @@
+.bordered {
+  padding: 1em 0 0;
+  border: 1px solid #999;
+  background-color: #CCCCCCCC;
+}
+
+.bordered:before {
+  padding-left: .3em;
+  top: -1em;
+  position: relative;
+  display:block;
+  border-bottom: 1px solid #999;
+  content: attr(data-border-title);
+}
+
+.bordered > * {
+  margin: 0 1em 1em;
+}

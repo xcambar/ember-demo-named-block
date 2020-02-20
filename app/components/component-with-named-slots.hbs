@@ -1,0 +1,26 @@
+<div class="bordered" data-border-title="component-with-named-slots">
+
+
+  <div
+    data-slot={{slot-name this "header"}}
+    class="bordered"
+    data-border-title="slot-header"
+  ></div>
+
+
+
+  <div
+    data-slot={{slot-name this "body"}}
+    class="bordered"
+    data-border-title="slot-header"
+  ></div>
+
+
+
+
+
+  {{yield (hash
+    header=(component "in-element-proxy" to=(slot-name this "header"))
+    body=(component "in-element-proxy" to=(slot-name this "body"))
+  )}}
+</div>
